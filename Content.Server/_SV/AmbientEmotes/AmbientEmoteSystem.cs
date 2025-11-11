@@ -53,10 +53,10 @@ public sealed class AmbientEmoteSystem : EntitySystem
                 continue;
 
             // TODO: Replace with RandomPredicted once the engine PR is merged https://github.com/space-wizards/RobustToolbox/pull/5849
-            var interval = _random.NextDouble() * (emote.MaxTimeBetweenIncidents - emote.MinTimeBetweenIncidents) + emote.MinDurationOfIncident;
+            var interval = _random.NextDouble() * (emote.MaxTimeBetweenIncidents - emote.MinTimeBetweenIncidents) + emote.MinTimeBetweenIncidents;
 
             // Set the new time
-            emote.NextIncidentTime = _timing.CurTime + TimeSpan.FromSeconds(timeBetween + duration);
+            emote.NextIncidentTime = _timing.CurTime + interval;
 
             Dirty(uid, emote);
 
