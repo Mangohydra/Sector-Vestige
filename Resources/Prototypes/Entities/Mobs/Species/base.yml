@@ -277,6 +277,10 @@
     alternateState: Standing
   - type: SetExamine # Umbra Change, all species can set additional examine text.
   - type: StunVisuals
+  - type: AmbientEmote
+    minTimeBetweenIncidents: 2700
+    maxTimeBetweenIncidents: 7200
+
 
 - type: entity
   save: false
