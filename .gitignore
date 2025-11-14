@@ -307,5 +307,5 @@ Resources/MapImages
 # Direnv stuff
 .direnv/
 
-# Devcontainer configurations (user-specific)
+# SV - Devcontainer configurations (user-specific)
 .devcontainer/
